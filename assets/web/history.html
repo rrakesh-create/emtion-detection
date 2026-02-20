@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MERS - Mood History</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root {
+            --bg-color: #1a1a1a;
+            --card-bg: #2d2d2d;
+            --text-color: #ffffff;
+            --accent: #4a90e2;
+            --danger: #cf6679;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--accent);
+            margin-bottom: 40px;
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        h2 {
+            margin-top: 0;
+            border-bottom: 1px solid #444;
+            padding-bottom: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 12px;
+            border-bottom: 1px solid #444;
+        }
+
+        th {
+            color: var(--accent);
+        }
+
+        .emotion-badge {
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+
+        .Happy { background: #4caf50; color: white; }
+        .Sad { background: #2196f3; color: white; }
+        .Angry { background: #f44336; color: white; }
+        .Surprise { background: #ff9800; color: white; }
+        .Fear { background: #9c27b0; color: white; }
+        .Neutral { background: #9e9e9e; color: white; }
+
+        .metric-box {
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 20px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 8px;
+        }
+
+        .metric-value {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: var(--accent);
+        }
+        
+        .metric-label {
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📊 MERS Mood History</h1>
+
+        <div class="dashboard-grid">
+            <!-- Chart Section -->
+            <div class="card">
+                <h2>Weekly Trends</h2>
+                <canvas id="moodChart" height="200"></canvas>
+            </div>
+
+            <!-- Stats Section -->
+            <div class="card">
+                <h2>Quick Stats</h2>
+                <div class="metric-box">
+                    <div class="metric-value" id="total-sessions">0</div>
+                    <div class="metric-label">Total Sessions</div>
+                </div>
+                <div class="metric-box">
+                    <div class="metric-value" id="avg-happiness">0%</div>
+                    <div class="metric-label">Efficiency Score</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recent Activity -->
+        <div class="card" style="margin-top: 20px;">
+            <h2>Recent Sessions</h2>
+            <table id="history-table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Dominant Emotion</th>
+                        <th>Duration</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- JS will populate this -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        async function loadData() {
+            try {
+                // Fetch data from API
+                const response = await fetch('/api/history');
+                const data = await response.json();
+
+                // Update Stats
+                document.getElementById('total-sessions').textContent = data.length;
+
+                // Process Data for Chart
+                const emotionCounts = {};
+                const tableBody = document.querySelector('#history-table tbody');
+                tableBody.innerHTML = '';
+
+                data.forEach(session => {
+                    // Populate Table
+                    const row = document.createElement('tr');
+                    const startTime = new Date(session.start_time);
+                    const duration = session.end_time ? 
+                        Math.round((new Date(session.end_time) - startTime) / 1000) + 's' : 
+                        'Active';
+
+                    const emotion = session.dominant_emotion || "Unknown";
+                    
+                    row.innerHTML = `
+                        <td>${startTime.toLocaleDateString()}</td>
+                        <td>${startTime.toLocaleTimeString()}</td>
+                        <td><span class="emotion-badge ${emotion}">${emotion}</span></td>
+                        <td>${duration}</td>
+                    `;
+                    tableBody.appendChild(row);
+
+                    // Aggregate for Chart
+                    if (emotion !== "Unknown" && emotion !== "None") {
+                        emotionCounts[emotion] = (emotionCounts[emotion] || 0) + 1;
+                    }
+                });
+
+                // Render Chart
+                const ctx = document.getElementById('moodChart').getContext('2d');
+                new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: Object.keys(emotionCounts),
+                        datasets: [{
+                            label: 'Session Frequency',
+                            data: Object.values(emotionCounts),
+                            backgroundColor: [
+                                'rgba(255, 99, 132, 0.5)',
+                                'rgba(54, 162, 235, 0.5)',
+                                'rgba(255, 206, 86, 0.5)',
+                                'rgba(75, 192, 192, 0.5)',
+                                'rgba(153, 102, 255, 0.5)',
+                                'rgba(255, 159, 64, 0.5)'
+                            ],
+                            borderColor: [
+                                'rgba(255, 99, 132, 1)',
+                                'rgba(54, 162, 235, 1)',
+                                'rgba(255, 206, 86, 1)',
+                                'rgba(75, 192, 192, 1)',
+                                'rgba(153, 102, 255, 1)',
+                                'rgba(255, 159, 64, 1)'
+                            ],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                grid: { color: '#444' },
+                                ticks: { color: '#fff' }
+                            },
+                            x: {
+                                grid: { display: false },
+                                ticks: { color: '#fff' }
+                            }
+                        },
+                        plugins: {
+                            legend: { labels: { color: '#fff' } }
+                        }
+                    }
+                });
+
+            } catch (error) {
+                console.error("Error loading history:", error);
+            }
+        }
+
+        // Load data on start
+        loadData();
+    </script>
+</body>
+</html>

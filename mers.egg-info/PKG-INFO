@@ -1,0 +1,88 @@
+Metadata-Version: 2.4
+Name: mers
+Version: 1.1.0
+Summary: Multimodal Emotion Recognition System
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: torch>=2.0.0
+Requires-Dist: torchvision
+Requires-Dist: torchaudio
+Requires-Dist: mediapipe
+Requires-Dist: sounddevice
+Requires-Dist: opencv-python
+Requires-Dist: numpy
+Requires-Dist: librosa
+Requires-Dist: facenet-pytorch
+
+# MERS: Multimodal Emotion Recognition System
+
+MERS (formerly SynEmotion) is a real-time multimodal emotion recognition framework that analyzes facial expressions and vocal characteristics simultaneously to infer human emotional states.
+
+## Key Features
+- **Multimodal Fusion**: Adaptive late fusion of Computer Vision (EfficientNet-B0) and Audio (CNN on MFCCs) models.
+- **Real-Time Analysis**: Multi-threaded architecture for low-latency inference.
+- **Visual Timeline**: Live history of emotional states.
+- **Stability Tracking**: Real-time analysis of facial expression stability.
+- **Conflict Detection**: Alerts when visual and audio cues contradict each other.
+- **Session Reporting**: Detailed statistics and CSV logging.
+
+## Installation
+
+1. **Clone/Download** the repository.
+2. **Install Dependencies**:
+   ```bash
+   pip install -e .
+   ```
+   Or using the requirements file:
+   ```bash
+   pip install -r mers/requirements.txt
+   ```
+   *Note: `pyaudio` is excluded to avoid Windows build issues; `sounddevice` is used instead.*
+
+## Usage
+
+### Quick Start
+Double-click `run_mers.bat` or run:
+```bash
+python mers/app.py
+```
+
+### Controls
+- **ESC**: Quit the application (saves session summary).
+
+### Configuration
+Edit `mers/config.json` to tune settings:
+```json
+{
+    "WEBCAM_ID": 0,
+    "CONFIDENCE_THRESHOLD_CONFLICT": 0.6,
+    ...
+}
+```
+
+## Training
+To train the models with your own datasets:
+
+**Visual Model:**
+```bash
+python mers/train/train_visual.py "path/to/fer2013_dataset"
+```
+
+**Audio Model:**
+```bash
+python mers/train/train_audio.py "path/to/ravdess_dataset"
+```
+
+## Project Structure
+```
+mers/
+├── app.py              # Main entry point
+├── config.json         # User settings
+├── models/             # Saved PyTorch models
+├── src/                # Core engines (Audio, Visual, Fusion, UI)
+├── tests/              # Unit tests
+└── metrics/            # CSV session logs
+```
+
+## License
+MIT License.

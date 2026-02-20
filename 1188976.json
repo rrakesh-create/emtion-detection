@@ -1,0 +1,1199 @@
+{
+  "access": {
+    "embargo": {
+      "active": false,
+      "reason": null
+    },
+    "files": "public",
+    "record": "public",
+    "status": "open"
+  },
+  "created": "2018-04-05T22:41:07.776597+00:00",
+  "custom_fields": {
+    "journal:journal": {
+      "issue": "5",
+      "pages": "e0196391",
+      "title": "PLoS ONE",
+      "volume": "13"
+    }
+  },
+  "deletion_status": {
+    "is_deleted": false,
+    "status": "P"
+  },
+  "files": {
+    "count": 49,
+    "enabled": true,
+    "entries": {
+      "Audio_Song_Actors_01-24.zip": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:5411230427d67a21e18aa4d466e6d1b9",
+        "ext": "zip",
+        "id": "49379011-34da-4d9c-b5a0-a67809a10f57",
+        "key": "Audio_Song_Actors_01-24.zip",
+        "links": {
+          "content": "https://zenodo.org/api/records/1188976/files/Audio_Song_Actors_01-24.zip/content",
+          "self": "https://zenodo.org/api/records/1188976/files/Audio_Song_Actors_01-24.zip"
+        },
+        "metadata": null,
+        "mimetype": "application/zip",
+        "size": 225505317,
+        "storage_class": "L"
+      },
+      "Audio_Speech_Actors_01-24.zip": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:bc696df654c87fed845eb13823edef8a",
+        "ext": "zip",
+        "id": "090dc93f-5f0d-4a61-bb6c-a4583e5f212f",
+        "key": "Audio_Speech_Actors_01-24.zip",
+        "links": {
+          "content": "https://zenodo.org/api/records/1188976/files/Audio_Speech_Actors_01-24.zip/content",
+          "self": "https://zenodo.org/api/records/1188976/files/Audio_Speech_Actors_01-24.zip"
+        },
+        "metadata": null,
+        "mimetype": "application/zip",
+        "size": 208468073,
+        "storage_class": "L"
+      },
+      "Video_Song_Actor_01.zip": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:0f7ba20f3a7278d5a662a7e30f44c942",
+        "ext": "zip",
+        "id": "5ba65828-6150-4a01-96b0-c5f3957c096f",
+        "key": "Video_Song_Actor_01.zip",
+        "links": {
+          "content": "https://zenodo.org/api/records/1188976/files/Video_Song_Actor_01.zip/content",
+          "self": "https://zenodo.org/api/records/1188976/files/Video_Song_Actor_01.zip"
+        },
+        "metadata": null,
+        "mimetype": "application/zip",
+        "size": 502513588,
+        "storage_class": "L"
+      },
+      "Video_Song_Actor_02.zip": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:8e426ef4134abe1dff4d2a8262abe8a9",
+        "ext": "zip",
+        "id": "c67e29b9-6b80-41ab-bb46-3deff25fb02d",
+        "key": "Video_Song_Actor_02.zip",
+        "links": {
+          "content": "https://zenodo.org/api/records/1188976/files/Video_Song_Actor_02.zip/content",
+          "self": "https://zenodo.org/api/records/1188976/files/Video_Song_Actor_02.zip"
+        },
+        "metadata": null,
+        "mimetype": "application/zip",
+        "size": 553420328,
+        "storage_class": "L"
+      },
+      "Video_Song_Actor_03.zip": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:2d686591f8760f8041d2dc75e8234828",
+        "ext": "zip",
+        "id": "51702246-fac7-4aa4-9321-74f5600d59a6",
+        "key": "Video_Song_Actor_03.zip",
+        "links": {
+          "content": "https://zenodo.org/api/records/1188976/files/Video_Song_Actor_03.zip/content",
+          "self": "https://zenodo.org/api/records/1188976/files/Video_Song_Actor_03.zip"
+        },
+        "metadata": null,
+        "mimetype": "application/zip",
+        "size": 508655610,
+        "storage_class": "L"
+      },
+      "Video_Song_Actor_04.zip": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:0f1b99c5acff841020546eec1aa32376",
+        "ext": "zip",
+        "id": "4721ea81-6c28-42cc-9c7a-8dba0770228e",
+        "key": "Video_Song_Actor_04.zip",
+        "links": {
+          "content": "https://zenodo.org/api/records/1188976/files/Video_Song_Actor_04.zip/content",
+          "self": "https://zenodo.org/api/records/1188976/files/Video_Song_Actor_04.zip"
+        },
+        "metadata": null,
+        "mimetype": "application/zip",
+        "size": 482238814,
+        "storage_class": "L"
+      },
+      "Video_Song_Actor_05.zip": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:9a51cef1d34fb3e9838c0b08b88f9234",
+        "ext": "zip",
+        "id": "ff48f2e0-b915-4248-abba-da9530f95ee6",
+        "key": "Video_Song_Actor_05.zip",
+        "links": {
+          "content": "https://zenodo.org/api/records/1188976/files/Video_Song_Actor_05.zip/content",
+          "self": "https://zenodo.org/api/records/1188976/files/Video_Song_Actor_05.zip"
+        },
+        "metadata": null,
+        "mimetype": "application/zip",
+        "size": 529815624,
+        "storage_class": "L"
+      },
+      "Video_Song_Actor_06.zip": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:a8d06eac834dd9835d208444ac17c744",
+        "ext": "zip",
+        "id": "12b55852-6bf7-4da2-a492-af4bd7b5c7b6",
+        "key": "Video_Song_Actor_06.zip",
+        "links": {
+          "content": "https://zenodo.org/api/records/1188976/files/Video_Song_Actor_06.zip/content",
+          "self": "https://zenodo.org/api/records/1188976/files/Video_Song_Actor_06.zip"
+        },
+        "metadata": null,
+        "mimetype": "application/zip",
+        "size": 518137235,
+        "storage_class": "L"
+      },
+      "Video_Song_Actor_07.zip": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:3c28c0ef1a70a625ae3b7168773c19bc",
+        "ext": "zip",
+        "id": "0e454599-fe23-4a14-ab60-d7b182e02491",
+        "key": "Video_Song_Actor_07.zip",
+        "links": {
+          "content": "https://zenodo.org/api/records/1188976/files/Video_Song_Actor_07.zip/content",
+          "self": "https://zenodo.org/api/records/1188976/files/Video_Song_Actor_07.zip"
+        },
+        "metadata": null,
+        "mimetype": "application/zip",
+        "size": 503620083,
+        "storage_class": "L"
+      },
+      "Video_Song_Actor_08.zip": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:9a71f2c8e6d19678a4cc2f0ba79e532a",
+        "ext": "zip",
+        "id": "36fe8c1a-8588-4e00-bf5c-9503d7eb12ec",
+        "key": "Video_Song_Actor_08.zip",
+        "links": {
+          "content": "https://zenodo.org/api/records/1188976/files/Video_Song_Actor_08.zip/content",
+          "self": "https://zenodo.org/api/records/1188976/files/Video_Song_Actor_08.zip"
+        },
+        "metadata": null,
+        "mimetype": "application/zip",
+        "size": 525763440,
+        "storage_class": "L"
+      },
+      "Video_Song_Actor_09.zip": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:b4b482f6a984b540def54a9ac5d0b1b2",
+        "ext": "zip",
+        "id": "daa09fe9-b529-4c42-9645-cdfe4c751052",
+        "key": "Video_Song_Actor_09.zip",
+        "links": {
+          "content": "https://zenodo.org/api/records/1188976/files/Video_Song_Actor_09.zip/content",
+          "self": "https://zenodo.org/api/records/1188976/files/Video_Song_Actor_09.zip"
+        },
+        "metadata": null,
+        "mimetype": "application/zip",
+        "size": 507373354,
+        "storage_class": "L"
+      },
+      "Video_Song_Actor_10.zip": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:8bcfdcad55a12ff1b1da24082ff57819",
+        "ext": "zip",
+        "id": "d0b63f1d-aebd-4245-926a-720e11c8f5fd",
+        "key": "Video_Song_Actor_10.zip",
+        "links": {
+          "content": "https://zenodo.org/api/records/1188976/files/Video_Song_Actor_10.zip/content",
+          "self": "https://zenodo.org/api/records/1188976/files/Video_Song_Actor_10.zip"
+        },
+        "metadata": null,
+        "mimetype": "application/zip",
+        "size": 540441375,
+        "storage_class": "L"
+      },
+      "Video_Song_Actor_11.zip": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:39d6d954d3d779c4c5ac3ca95f99b284",
+        "ext": "zip",
+        "id": "9ef0999f-95db-49af-8302-9a9a318e7458",
+        "key": "Video_Song_Actor_11.zip",
+        "links": {
+          "content": "https://zenodo.org/api/records/1188976/files/Video_Song_Actor_11.zip/content",
+          "self": "https://zenodo.org/api/records/1188976/files/Video_Song_Actor_11.zip"
+        },
+        "metadata": null,
+        "mimetype": "application/zip",
+        "size": 482139346,
+        "storage_class": "L"
+      },
+      "Video_Song_Actor_12.zip": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:818b8ce6463c42f56fa7df5a23eb15aa",
+        "ext": "zip",
+        "id": "709562a7-44f0-420f-8f43-c0d52638fefc",
+        "key": "Video_Song_Actor_12.zip",
+        "links": {
+          "content": "https://zenodo.org/api/records/1188976/files/Video_Song_Actor_12.zip/content",
+          "self": "https://zenodo.org/api/records/1188976/files/Video_Song_Actor_12.zip"
+        },
+        "metadata": null,
+        "mimetype": "application/zip",
+        "size": 488609103,
+        "storage_class": "L"
+      },
+      "Video_Song_Actor_13.zip": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:0311dd65a9d9dabec72a4482b6f1ea55",
+        "ext": "zip",
+        "id": "f045e522-228d-47e0-9645-a5320d2f0655",
+        "key": "Video_Song_Actor_13.zip",
+        "links": {
+          "content": "https://zenodo.org/api/records/1188976/files/Video_Song_Actor_13.zip/content",
+          "self": "https://zenodo.org/api/records/1188976/files/Video_Song_Actor_13.zip"
+        },
+        "metadata": null,
+        "mimetype": "application/zip",
+        "size": 493246031,
+        "storage_class": "L"
+      },
+      "Video_Song_Actor_14.zip": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:6c4a681c132c905cc8dff38d85117b37",
+        "ext": "zip",
+        "id": "7c9e226e-f1b0-416d-ac15-cdd8cec65d2b",
+        "key": "Video_Song_Actor_14.zip",
+        "links": {
+          "content": "https://zenodo.org/api/records/1188976/files/Video_Song_Actor_14.zip/content",
+          "self": "https://zenodo.org/api/records/1188976/files/Video_Song_Actor_14.zip"
+        },
+        "metadata": null,
+        "mimetype": "application/zip",
+        "size": 477100629,
+        "storage_class": "L"
+      },
+      "Video_Song_Actor_15.zip": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:7532b9ea79552db8a28a33bdf6b79d80",
+        "ext": "zip",
+        "id": "4d4f59b7-222c-49d1-8e23-2255a7f1604e",
+        "key": "Video_Song_Actor_15.zip",
+        "links": {
+          "content": "https://zenodo.org/api/records/1188976/files/Video_Song_Actor_15.zip/content",
+          "self": "https://zenodo.org/api/records/1188976/files/Video_Song_Actor_15.zip"
+        },
+        "metadata": null,
+        "mimetype": "application/zip",
+        "size": 470442416,
+        "storage_class": "L"
+      },
+      "Video_Song_Actor_16.zip": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:9f68766c1dc14222069c92da83db4875",
+        "ext": "zip",
+        "id": "89177e3d-1d1e-4bc3-b272-cc5a78b8b349",
+        "key": "Video_Song_Actor_16.zip",
+        "links": {
+          "content": "https://zenodo.org/api/records/1188976/files/Video_Song_Actor_16.zip/content",
+          "self": "https://zenodo.org/api/records/1188976/files/Video_Song_Actor_16.zip"
+        },
+        "metadata": null,
+        "mimetype": "application/zip",
+        "size": 524511180,
+        "storage_class": "L"
+      },
+      "Video_Song_Actor_17.zip": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:7e0980984399183ca3d38843ffc00897",
+        "ext": "zip",
+        "id": "57d6fcd8-068b-4fe0-9103-ecc2e5ce3d54",
+        "key": "Video_Song_Actor_17.zip",
+        "links": {
+          "content": "https://zenodo.org/api/records/1188976/files/Video_Song_Actor_17.zip/content",
+          "self": "https://zenodo.org/api/records/1188976/files/Video_Song_Actor_17.zip"
+        },
+        "metadata": null,
+        "mimetype": "application/zip",
+        "size": 548703189,
+        "storage_class": "L"
+      },
+      "Video_Song_Actor_19.zip": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:ecb411e08834305e64e11a4fb4aed741",
+        "ext": "zip",
+        "id": "ad56a9c9-c94b-4b1f-9f48-b9de8de86bb5",
+        "key": "Video_Song_Actor_19.zip",
+        "links": {
+          "content": "https://zenodo.org/api/records/1188976/files/Video_Song_Actor_19.zip/content",
+          "self": "https://zenodo.org/api/records/1188976/files/Video_Song_Actor_19.zip"
+        },
+        "metadata": null,
+        "mimetype": "application/zip",
+        "size": 508687880,
+        "storage_class": "L"
+      },
+      "Video_Song_Actor_20.zip": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:21650223a74feeafdc54bf3e647a77a6",
+        "ext": "zip",
+        "id": "ea8c46fb-e9b9-4bca-b885-3677b64c1e82",
+        "key": "Video_Song_Actor_20.zip",
+        "links": {
+          "content": "https://zenodo.org/api/records/1188976/files/Video_Song_Actor_20.zip/content",
+          "self": "https://zenodo.org/api/records/1188976/files/Video_Song_Actor_20.zip"
+        },
+        "metadata": null,
+        "mimetype": "application/zip",
+        "size": 533526907,
+        "storage_class": "L"
+      },
+      "Video_Song_Actor_21.zip": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:c926bb0244a4d4bf534eaca02c627e36",
+        "ext": "zip",
+        "id": "128e7aff-59ca-45ed-bd93-e0a5e3686d94",
+        "key": "Video_Song_Actor_21.zip",
+        "links": {
+          "content": "https://zenodo.org/api/records/1188976/files/Video_Song_Actor_21.zip/content",
+          "self": "https://zenodo.org/api/records/1188976/files/Video_Song_Actor_21.zip"
+        },
+        "metadata": null,
+        "mimetype": "application/zip",
+        "size": 507300520,
+        "storage_class": "L"
+      },
+      "Video_Song_Actor_22.zip": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:bcde19cd5460662c207293ae94f415f9",
+        "ext": "zip",
+        "id": "270a75c4-a6d0-4236-9d91-057eb31c77bd",
+        "key": "Video_Song_Actor_22.zip",
+        "links": {
+          "content": "https://zenodo.org/api/records/1188976/files/Video_Song_Actor_22.zip/content",
+          "self": "https://zenodo.org/api/records/1188976/files/Video_Song_Actor_22.zip"
+        },
+        "metadata": null,
+        "mimetype": "application/zip",
+        "size": 546858914,
+        "storage_class": "L"
+      },
+      "Video_Song_Actor_23.zip": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:97772a15b0ba86177afc94c648d026af",
+        "ext": "zip",
+        "id": "480e55bc-f104-499a-a05e-07c631fa217b",
+        "key": "Video_Song_Actor_23.zip",
+        "links": {
+          "content": "https://zenodo.org/api/records/1188976/files/Video_Song_Actor_23.zip/content",
+          "self": "https://zenodo.org/api/records/1188976/files/Video_Song_Actor_23.zip"
+        },
+        "metadata": null,
+        "mimetype": "application/zip",
+        "size": 527193354,
+        "storage_class": "L"
+      },
+      "Video_Song_Actor_24.zip": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:bfb25878b311c70079ce941bef04cd38",
+        "ext": "zip",
+        "id": "c5b1b30c-3e8e-4073-ac66-e7af651cec00",
+        "key": "Video_Song_Actor_24.zip",
+        "links": {
+          "content": "https://zenodo.org/api/records/1188976/files/Video_Song_Actor_24.zip/content",
+          "self": "https://zenodo.org/api/records/1188976/files/Video_Song_Actor_24.zip"
+        },
+        "metadata": null,
+        "mimetype": "application/zip",
+        "size": 528597175,
+        "storage_class": "L"
+      },
+      "Video_Speech_Actor_01.zip": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:3c8ececaf392b4a9b11b32271f4f6d01",
+        "ext": "zip",
+        "id": "0665d75e-feeb-4b18-b8da-4739663c7e2d",
+        "key": "Video_Speech_Actor_01.zip",
+        "links": {
+          "content": "https://zenodo.org/api/records/1188976/files/Video_Speech_Actor_01.zip/content",
+          "self": "https://zenodo.org/api/records/1188976/files/Video_Speech_Actor_01.zip"
+        },
+        "metadata": null,
+        "mimetype": "application/zip",
+        "size": 552968353,
+        "storage_class": "L"
+      },
+      "Video_Speech_Actor_02.zip": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:a6f40d413b2e6ef25b3a595099e59abb",
+        "ext": "zip",
+        "id": "6b48f6f0-73dd-45c8-bdb2-7bdef2ebdfa7",
+        "key": "Video_Speech_Actor_02.zip",
+        "links": {
+          "content": "https://zenodo.org/api/records/1188976/files/Video_Speech_Actor_02.zip/content",
+          "self": "https://zenodo.org/api/records/1188976/files/Video_Speech_Actor_02.zip"
+        },
+        "metadata": null,
+        "mimetype": "application/zip",
+        "size": 570673024,
+        "storage_class": "L"
+      },
+      "Video_Speech_Actor_03.zip": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:68fa240ddd8a3cc410c64efe5fb2b0e4",
+        "ext": "zip",
+        "id": "bd544b75-0aec-46f6-baf0-1c0f76267e3c",
+        "key": "Video_Speech_Actor_03.zip",
+        "links": {
+          "content": "https://zenodo.org/api/records/1188976/files/Video_Speech_Actor_03.zip/content",
+          "self": "https://zenodo.org/api/records/1188976/files/Video_Speech_Actor_03.zip"
+        },
+        "metadata": null,
+        "mimetype": "application/zip",
+        "size": 567824665,
+        "storage_class": "L"
+      },
+      "Video_Speech_Actor_04.zip": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:013eed832af1f7e97082aae398a00dbe",
+        "ext": "zip",
+        "id": "44f7aa97-cbb5-4be2-aa59-589529ee98d9",
+        "key": "Video_Speech_Actor_04.zip",
+        "links": {
+          "content": "https://zenodo.org/api/records/1188976/files/Video_Speech_Actor_04.zip/content",
+          "self": "https://zenodo.org/api/records/1188976/files/Video_Speech_Actor_04.zip"
+        },
+        "metadata": null,
+        "mimetype": "application/zip",
+        "size": 546560009,
+        "storage_class": "L"
+      },
+      "Video_Speech_Actor_05.zip": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:b00e17d61374ef6ba86fef35d50a20fb",
+        "ext": "zip",
+        "id": "7d033d05-e960-4474-996b-1e863f3d664f",
+        "key": "Video_Speech_Actor_05.zip",
+        "links": {
+          "content": "https://zenodo.org/api/records/1188976/files/Video_Speech_Actor_05.zip/content",
+          "self": "https://zenodo.org/api/records/1188976/files/Video_Speech_Actor_05.zip"
+        },
+        "metadata": null,
+        "mimetype": "application/zip",
+        "size": 562966425,
+        "storage_class": "L"
+      },
+      "Video_Speech_Actor_06.zip": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:3c42877921cc08cfb5c841a0f2cb94a7",
+        "ext": "zip",
+        "id": "40832372-c446-4c69-bc11-45566156808c",
+        "key": "Video_Speech_Actor_06.zip",
+        "links": {
+          "content": "https://zenodo.org/api/records/1188976/files/Video_Speech_Actor_06.zip/content",
+          "self": "https://zenodo.org/api/records/1188976/files/Video_Speech_Actor_06.zip"
+        },
+        "metadata": null,
+        "mimetype": "application/zip",
+        "size": 568517859,
+        "storage_class": "L"
+      },
+      "Video_Speech_Actor_07.zip": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:bdd29bfe082f80361ec6b589845c283d",
+        "ext": "zip",
+        "id": "7507a41a-f70e-46a6-9a3b-94e0888d0da8",
+        "key": "Video_Speech_Actor_07.zip",
+        "links": {
+          "content": "https://zenodo.org/api/records/1188976/files/Video_Speech_Actor_07.zip/content",
+          "self": "https://zenodo.org/api/records/1188976/files/Video_Speech_Actor_07.zip"
+        },
+        "metadata": null,
+        "mimetype": "application/zip",
+        "size": 565652404,
+        "storage_class": "L"
+      },
+      "Video_Speech_Actor_08.zip": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:bed5f43d9c18e177e34d4bc1ed9b6d77",
+        "ext": "zip",
+        "id": "46ba65bd-eedd-4cb5-9a8e-0b5a04384d60",
+        "key": "Video_Speech_Actor_08.zip",
+        "links": {
+          "content": "https://zenodo.org/api/records/1188976/files/Video_Speech_Actor_08.zip/content",
+          "self": "https://zenodo.org/api/records/1188976/files/Video_Speech_Actor_08.zip"
+        },
+        "metadata": null,
+        "mimetype": "application/zip",
+        "size": 562573079,
+        "storage_class": "L"
+      },
+      "Video_Speech_Actor_09.zip": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:775da349c50bf915a1bbcb37379bd092",
+        "ext": "zip",
+        "id": "93292b84-dfb4-4af3-a0a0-a9b38c479ff6",
+        "key": "Video_Speech_Actor_09.zip",
+        "links": {
+          "content": "https://zenodo.org/api/records/1188976/files/Video_Speech_Actor_09.zip/content",
+          "self": "https://zenodo.org/api/records/1188976/files/Video_Speech_Actor_09.zip"
+        },
+        "metadata": null,
+        "mimetype": "application/zip",
+        "size": 523489249,
+        "storage_class": "L"
+      },
+      "Video_Speech_Actor_10.zip": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:70199d1c6902f76e17df308d5c41fa01",
+        "ext": "zip",
+        "id": "41742a0f-f897-467b-a2e8-56ed3edad3e0",
+        "key": "Video_Speech_Actor_10.zip",
+        "links": {
+          "content": "https://zenodo.org/api/records/1188976/files/Video_Speech_Actor_10.zip/content",
+          "self": "https://zenodo.org/api/records/1188976/files/Video_Speech_Actor_10.zip"
+        },
+        "metadata": null,
+        "mimetype": "application/zip",
+        "size": 565580163,
+        "storage_class": "L"
+      },
+      "Video_Speech_Actor_11.zip": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:824504aa41a8fd575e5459d5701dd378",
+        "ext": "zip",
+        "id": "cd633846-3261-4e56-ab27-da540cab2f67",
+        "key": "Video_Speech_Actor_11.zip",
+        "links": {
+          "content": "https://zenodo.org/api/records/1188976/files/Video_Speech_Actor_11.zip/content",
+          "self": "https://zenodo.org/api/records/1188976/files/Video_Speech_Actor_11.zip"
+        },
+        "metadata": null,
+        "mimetype": "application/zip",
+        "size": 518634370,
+        "storage_class": "L"
+      },
+      "Video_Speech_Actor_12.zip": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:2a1f0ddc0ca207beedee6ce2ea863ad7",
+        "ext": "zip",
+        "id": "896afff2-b019-47cc-9295-6f4beccf9e91",
+        "key": "Video_Speech_Actor_12.zip",
+        "links": {
+          "content": "https://zenodo.org/api/records/1188976/files/Video_Speech_Actor_12.zip/content",
+          "self": "https://zenodo.org/api/records/1188976/files/Video_Speech_Actor_12.zip"
+        },
+        "metadata": null,
+        "mimetype": "application/zip",
+        "size": 557928718,
+        "storage_class": "L"
+      },
+      "Video_Speech_Actor_13.zip": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:c5f2fd4fd77941636947620368c612b5",
+        "ext": "zip",
+        "id": "df6f3220-ab03-44d2-bf52-b6bba2b9bc7e",
+        "key": "Video_Speech_Actor_13.zip",
+        "links": {
+          "content": "https://zenodo.org/api/records/1188976/files/Video_Speech_Actor_13.zip/content",
+          "self": "https://zenodo.org/api/records/1188976/files/Video_Speech_Actor_13.zip"
+        },
+        "metadata": null,
+        "mimetype": "application/zip",
+        "size": 501877549,
+        "storage_class": "L"
+      },
+      "Video_Speech_Actor_14.zip": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:466d31f4cce92a14b1f4ee884bbdf7d7",
+        "ext": "zip",
+        "id": "171f45ce-35f1-47dc-bdf4-83c848b2b196",
+        "key": "Video_Speech_Actor_14.zip",
+        "links": {
+          "content": "https://zenodo.org/api/records/1188976/files/Video_Speech_Actor_14.zip/content",
+          "self": "https://zenodo.org/api/records/1188976/files/Video_Speech_Actor_14.zip"
+        },
+        "metadata": null,
+        "mimetype": "application/zip",
+        "size": 552484059,
+        "storage_class": "L"
+      },
+      "Video_Speech_Actor_15.zip": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:4b3b9bc8473e86f884630f2506684887",
+        "ext": "zip",
+        "id": "2418850a-acad-4e01-bacc-1800ff8f1e00",
+        "key": "Video_Speech_Actor_15.zip",
+        "links": {
+          "content": "https://zenodo.org/api/records/1188976/files/Video_Speech_Actor_15.zip/content",
+          "self": "https://zenodo.org/api/records/1188976/files/Video_Speech_Actor_15.zip"
+        },
+        "metadata": null,
+        "mimetype": "application/zip",
+        "size": 525205576,
+        "storage_class": "L"
+      },
+      "Video_Speech_Actor_16.zip": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:a63c54570ebbe6bd616d0dced5630f7e",
+        "ext": "zip",
+        "id": "078fcf99-93d4-4722-b994-095aefcb6c5c",
+        "key": "Video_Speech_Actor_16.zip",
+        "links": {
+          "content": "https://zenodo.org/api/records/1188976/files/Video_Speech_Actor_16.zip/content",
+          "self": "https://zenodo.org/api/records/1188976/files/Video_Speech_Actor_16.zip"
+        },
+        "metadata": null,
+        "mimetype": "application/zip",
+        "size": 562416513,
+        "storage_class": "L"
+      },
+      "Video_Speech_Actor_17.zip": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:8b7ae3e5a85d2874ac8e1195e722e047",
+        "ext": "zip",
+        "id": "b3b51544-ccd7-44bc-a70e-cc4098a50ada",
+        "key": "Video_Speech_Actor_17.zip",
+        "links": {
+          "content": "https://zenodo.org/api/records/1188976/files/Video_Speech_Actor_17.zip/content",
+          "self": "https://zenodo.org/api/records/1188976/files/Video_Speech_Actor_17.zip"
+        },
+        "metadata": null,
+        "mimetype": "application/zip",
+        "size": 551688845,
+        "storage_class": "L"
+      },
+      "Video_Speech_Actor_18.zip": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:fef2131ac361da182c0cb85f3d8e8a6c",
+        "ext": "zip",
+        "id": "b2adff89-a9de-4674-ba6d-3ec748572509",
+        "key": "Video_Speech_Actor_18.zip",
+        "links": {
+          "content": "https://zenodo.org/api/records/1188976/files/Video_Speech_Actor_18.zip/content",
+          "self": "https://zenodo.org/api/records/1188976/files/Video_Speech_Actor_18.zip"
+        },
+        "metadata": null,
+        "mimetype": "application/zip",
+        "size": 565655520,
+        "storage_class": "L"
+      },
+      "Video_Speech_Actor_19.zip": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:abb97d97d8c4e88c866cee1cea9d06d6",
+        "ext": "zip",
+        "id": "b0b0330a-455b-45c9-bf9b-e3544c02dced",
+        "key": "Video_Speech_Actor_19.zip",
+        "links": {
+          "content": "https://zenodo.org/api/records/1188976/files/Video_Speech_Actor_19.zip/content",
+          "self": "https://zenodo.org/api/records/1188976/files/Video_Speech_Actor_19.zip"
+        },
+        "metadata": null,
+        "mimetype": "application/zip",
+        "size": 581121687,
+        "storage_class": "L"
+      },
+      "Video_Speech_Actor_20.zip": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:5ddfb22770093bafebdefe8faa449f48",
+        "ext": "zip",
+        "id": "a2f73185-79f7-44ac-b874-8c6feafd1cd3",
+        "key": "Video_Speech_Actor_20.zip",
+        "links": {
+          "content": "https://zenodo.org/api/records/1188976/files/Video_Speech_Actor_20.zip/content",
+          "self": "https://zenodo.org/api/records/1188976/files/Video_Speech_Actor_20.zip"
+        },
+        "metadata": null,
+        "mimetype": "application/zip",
+        "size": 561349264,
+        "storage_class": "L"
+      },
+      "Video_Speech_Actor_21.zip": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:d810cf2ff6863ef91306fc7a16d74fbb",
+        "ext": "zip",
+        "id": "e242d788-cff0-43b5-9163-ae383a769cbc",
+        "key": "Video_Speech_Actor_21.zip",
+        "links": {
+          "content": "https://zenodo.org/api/records/1188976/files/Video_Speech_Actor_21.zip/content",
+          "self": "https://zenodo.org/api/records/1188976/files/Video_Speech_Actor_21.zip"
+        },
+        "metadata": null,
+        "mimetype": "application/zip",
+        "size": 590292896,
+        "storage_class": "L"
+      },
+      "Video_Speech_Actor_22.zip": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:fee55f72c9871401f23d4b167de3217d",
+        "ext": "zip",
+        "id": "4b131f90-cf19-46c1-ac78-4f3cdb2aef0a",
+        "key": "Video_Speech_Actor_22.zip",
+        "links": {
+          "content": "https://zenodo.org/api/records/1188976/files/Video_Speech_Actor_22.zip/content",
+          "self": "https://zenodo.org/api/records/1188976/files/Video_Speech_Actor_22.zip"
+        },
+        "metadata": null,
+        "mimetype": "application/zip",
+        "size": 560907466,
+        "storage_class": "L"
+      },
+      "Video_Speech_Actor_23.zip": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:b31e8c8904e66102e7a951694db752d6",
+        "ext": "zip",
+        "id": "03caa2de-9717-4386-9118-7a3a301257e3",
+        "key": "Video_Speech_Actor_23.zip",
+        "links": {
+          "content": "https://zenodo.org/api/records/1188976/files/Video_Speech_Actor_23.zip/content",
+          "self": "https://zenodo.org/api/records/1188976/files/Video_Speech_Actor_23.zip"
+        },
+        "metadata": null,
+        "mimetype": "application/zip",
+        "size": 545177865,
+        "storage_class": "L"
+      },
+      "Video_Speech_Actor_24.zip": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:eef90e806c9179bc5b4b098d03647ae3",
+        "ext": "zip",
+        "id": "6217b657-158b-4bfd-b3f5-012654b8f625",
+        "key": "Video_Speech_Actor_24.zip",
+        "links": {
+          "content": "https://zenodo.org/api/records/1188976/files/Video_Speech_Actor_24.zip/content",
+          "self": "https://zenodo.org/api/records/1188976/files/Video_Speech_Actor_24.zip"
+        },
+        "metadata": null,
+        "mimetype": "application/zip",
+        "size": 595799165,
+        "storage_class": "L"
+      }
+    },
+    "order": [],
+    "total_bytes": 25600214208
+  },
+  "id": "1188976",
+  "is_draft": false,
+  "is_published": true,
+  "links": {
+    "access": "https://zenodo.org/api/records/1188976/access",
+    "access_grants": "https://zenodo.org/api/records/1188976/access/grants",
+    "access_links": "https://zenodo.org/api/records/1188976/access/links",
+    "access_request": "https://zenodo.org/api/records/1188976/access/request",
+    "access_users": "https://zenodo.org/api/records/1188976/access/users",
+    "archive": "https://zenodo.org/api/records/1188976/files-archive",
+    "archive_media": "https://zenodo.org/api/records/1188976/media-files-archive",
+    "communities": "https://zenodo.org/api/records/1188976/communities",
+    "communities-suggestions": "https://zenodo.org/api/records/1188976/communities-suggestions",
+    "doi": "https://doi.org/10.5281/zenodo.1188976",
+    "draft": "https://zenodo.org/api/records/1188976/draft",
+    "file_modification": "https://zenodo.org/api/records/1188976/file-modification",
+    "files": "https://zenodo.org/api/records/1188976/files",
+    "latest": "https://zenodo.org/api/records/1188976/versions/latest",
+    "latest_html": "https://zenodo.org/records/1188976/latest",
+    "media_files": "https://zenodo.org/api/records/1188976/media-files",
+    "parent": "https://zenodo.org/api/records/1188975",
+    "parent_doi": "https://doi.org/10.5281/zenodo.1188975",
+    "parent_doi_html": "https://zenodo.org/doi/10.5281/zenodo.1188975",
+    "parent_html": "https://zenodo.org/records/1188975",
+    "preview_html": "https://zenodo.org/records/1188976?preview=1",
+    "request_deletion": "https://zenodo.org/api/records/1188976/request-deletion",
+    "requests": "https://zenodo.org/api/records/1188976/requests",
+    "reserve_doi": "https://zenodo.org/api/records/1188976/draft/pids/doi",
+    "self": "https://zenodo.org/api/records/1188976",
+    "self_doi": "https://doi.org/10.5281/zenodo.1188976",
+    "self_doi_html": "https://zenodo.org/doi/10.5281/zenodo.1188976",
+    "self_html": "https://zenodo.org/records/1188976",
+    "self_iiif_manifest": "https://zenodo.org/api/iiif/record:1188976/manifest",
+    "self_iiif_sequence": "https://zenodo.org/api/iiif/record:1188976/sequence/default",
+    "versions": "https://zenodo.org/api/records/1188976/versions"
+  },
+  "media_files": {
+    "count": 0,
+    "enabled": false,
+    "entries": {},
+    "order": [],
+    "total_bytes": 0
+  },
+  "metadata": {
+    "additional_descriptions": [
+      {
+        "description": "Funding Information\nNatural Sciences and Engineering Research Council of Canada: 2012-341583 \nHear the world research chair in music and emotional speech from Phonak",
+        "type": {
+          "id": "notes",
+          "title": {
+            "de": "Anmerkungen",
+            "en": "Notes"
+          }
+        }
+      }
+    ],
+    "creators": [
+      {
+        "affiliations": [
+          {
+            "name": "University of Wisconsin, River Falls"
+          }
+        ],
+        "person_or_org": {
+          "family_name": "Livingstone",
+          "given_name": "Steven R.",
+          "identifiers": [
+            {
+              "identifier": "0000-0002-6364-6410",
+              "scheme": "orcid"
+            }
+          ],
+          "name": "Livingstone, Steven R.",
+          "type": "personal"
+        }
+      },
+      {
+        "affiliations": [
+          {
+            "name": "Ryerson University"
+          }
+        ],
+        "person_or_org": {
+          "family_name": "Russo",
+          "given_name": "Frank A.",
+          "identifiers": [
+            {
+              "identifier": "0000-0002-2939-6358",
+              "scheme": "orcid"
+            }
+          ],
+          "name": "Russo, Frank A.",
+          "type": "personal"
+        }
+      }
+    ],
+    "description": "<p><strong>Description</strong></p>\n<p>The Ryerson Audio-Visual Database of Emotional Speech and Song (<a href=\"https://affectivedatascience.com/datasets.html#ravdess\">RAVDESS</a>) contains 7356 files (total size: 24.8 GB).&nbsp;The dataset contains 24 professional actors (12 female, 12 male), vocalizing two lexically-matched statements in a neutral North American accent. Speech includes calm, happy, sad, angry, fearful, surprise, and disgust expressions, and song contains calm, happy, sad, angry, and fearful emotions. Each expression is produced at two levels of emotional intensity (normal, strong), with an additional neutral expression. All conditions are available in three modality formats: Audio-only (16bit, 48kHz .wav), Audio-Video (720p H.264, AAC 48kHz, .mp4), and Video-only (no sound).&nbsp;&nbsp;Note, there are no song files for Actor_18.</p>\n<p>The RAVDESS was developed by Dr <a href=\"https://affectivedatascience.com/people/livingstone_sr\" target=\"_blank\" rel=\"noopener\">Steven R. Livingstone</a>, who now leads the <a href=\"https://affectivedatascience.com\">Affective Data Science Lab</a>, and Dr <a href=\"https://www.torontomu.ca/psychology/about-us/our-people/faculty/frank-russo/\" target=\"_blank\" rel=\"noopener\">Frank A. Russo</a> who leads the <a href=\"https://psychlabs.torontomu.ca/smartlab/\">SMART Lab</a>.</p>\n<p><strong>Citing the RAVDESS</strong></p>\n<p>The RAVDESS is released under a Creative Commons Attribution license, so please cite the RAVDESS if it is used in your work in any form.&nbsp; Published academic papers should use the academic paper citation for our PLoS1 paper.&nbsp; Personal works, such as machine learning projects/blog posts, should provide a URL to this Zenodo page, though a reference to our PLoS1 paper would also be appreciated.</p>\n<p><em>Academic paper citation</em></p>\n<blockquote>\n<p>Livingstone SR, Russo FA (2018) The Ryerson Audio-Visual Database of Emotional Speech and Song (RAVDESS): A dynamic, multimodal set of facial and vocal expressions in North American English. PLoS ONE 13(5): e0196391. <a href=\"https://doi.org/10.1371/journal.pone.0196391\">https://doi.org/10.1371/journal.pone.0196391</a>.</p>\n</blockquote>\n<p><em>Personal use citation</em></p>\n<blockquote>\n<p>Include a link to this Zenodo page - <a href=\"../record/1188976\">https://zenodo.org/record/1188976</a></p>\n</blockquote>\n<p><strong>Commercial Licenses</strong></p>\n<p>Commercial licenses for the RAVDESS can be purchased.&nbsp; For more information, please visit our <a href=\"https://psychlabs.torontomu.ca/smartlab/ravdess-commercial-licensing/\">license page of fees</a>, or contact us at <a href=\"mailto:ravdess@gmail.com?subject=RAVDESS%20Commercial%20License\">ravdess@gmail.com</a>.</p>\n<p><strong>Contact Information</strong></p>\n<p>If you would like further information about the RAVDESS, to purchase a commercial license, or if you experience any issues downloading files, please contact us at <a href=\"mailto:ravdess@gmail.com?subject=RAVDESS%20feedback%20from%20Zenodo\">ravdess@gmail.com</a>.</p>\n<p><strong>Example Videos</strong></p>\n<p>Watch a sample of the RAVDESS <a href=\"https://www.youtube.com/watch?v=Y7OQoNEu3dY\">speech</a> and <a href=\"https://www.youtube.com/watch?v=XQkmH4oYZkg\">song</a> videos.</p>\n<p><strong>Emotion Classification Users</strong></p>\n<p>If you're interested in using machine learning to classify emotional expressions with the RAVDESS, please see our new RAVDESS Facial Landmark Tracking data set [<a href=\"../record/3255102\">Zenodo project page</a>].</p>\n<p><strong>Construction and Validation</strong></p>\n<p>Full details on the construction and perceptual validation of the RAVDESS are described in our PLoS ONE paper - <a href=\"https://doi.org/10.1371/journal.pone.0196391\">https://doi.org/10.1371/journal.pone.0196391</a>.</p>\n<p>The RAVDESS contains 7356 files. Each file&nbsp;was rated 10 times on emotional validity, intensity, and genuineness. Ratings were provided by 247 individuals who were characteristic of untrained adult research participants from North America. A further set of 72 participants provided test-retest data. High levels of emotional validity, interrater reliability,&nbsp;and test-retest intrarater reliability were reported. Validation data is open-access, and can be downloaded along with our paper from <a href=\"http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0196391\">PLoS ONE</a>.</p>\n<p><strong>Contents</strong></p>\n<p><em>Audio-only files</em></p>\n<p>Audio-only files of all actors (01-24) are available as two separate zip files (~200 MB each):</p>\n<ul>\n<li>Speech file (Audio_Speech_Actors_01-24.zip, 215 MB) contains 1440 files: 60 trials per actor x 24 actors = 1440.&nbsp;</li>\n<li>Song file (Audio_Song_Actors_01-24.zip, 198 MB) contains 1012 files: 44 trials per actor x 23 actors = 1012.</li>\n</ul>\n<p><em>Audio-Visual and Video-only files</em></p>\n<p>Video files are provided as separate zip downloads for each actor (01-24, ~500 MB each), and are split into separate speech and song downloads:</p>\n<ul>\n<li>Speech files (Video_Speech_Actor_01.zip to Video_Speech_Actor_24.zip) collectively contains 2880 files: 60 trials per actor x 2 modalities (AV, VO) x&nbsp;24 actors&nbsp;= 2880.</li>\n<li>Song files (Video_Song_Actor_01.zip to Video_Song_Actor_24.zip) collectively contains 2024 files: 44 trials per actor x 2 modalities (AV, VO) x&nbsp;23 actors&nbsp;= 2024.</li>\n</ul>\n<p><em>File Summary</em></p>\n<p>In total, the RAVDESS collection includes 7356 files (2880+2024+1440+1012 files).</p>\n<p><strong>File naming convention</strong></p>\n<p>Each of the 7356 RAVDESS files has a unique filename. The filename consists of a 7-part numerical identifier (e.g., 02-01-06-01-02-01-12.mp4). These identifiers define the stimulus characteristics:&nbsp;<br><br><em>Filename identifiers&nbsp;</em></p>\n<ul>\n<li>Modality (01 = full-AV, 02 = video-only, 03 = audio-only).</li>\n<li>Vocal channel (01 = speech, 02 = song).</li>\n<li>Emotion (01 = neutral, 02 = calm, 03 = happy, 04 = sad, 05 = angry, 06 = fearful, 07 = disgust, 08 = surprised).</li>\n<li>Emotional intensity (01 = normal, 02 = strong). NOTE: There is no strong intensity for the 'neutral' emotion.</li>\n<li>Statement (01 = \"Kids are talking by the door\", 02 = \"Dogs are sitting by the door\").</li>\n<li>Repetition (01 = 1st repetition, 02 = 2nd repetition).</li>\n<li>Actor (01 to 24. Odd numbered actors are male, even numbered actors are female).</li>\n</ul>\n<p><br><em>Filename example: 02-01-06-01-02-01-12.mp4&nbsp;</em></p>\n<ol>\n<li>Video-only (02)</li>\n<li>Speech (01)</li>\n<li>Fearful (06)</li>\n<li>Normal intensity (01)</li>\n<li>Statement \"dogs\" (02)</li>\n<li>1st Repetition (01)</li>\n<li>12th Actor (12)</li>\n<li>Female, as the actor ID number is even.</li>\n</ol>\n<p><strong>License information</strong></p>\n<p>The RAVDESS is released under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License,&nbsp;<a href=\"https://creativecommons.org/licenses/by-nc-sa/4.0/\">CC BY-NC-SA 4.0</a>&nbsp;</p>\n<p>Commercial licenses for the RAVDESS can also be purchased.&nbsp; For more information, please visit our <a href=\"https://smartlaboratory.org/ravdess/commercial-licensing/\">license fee page</a>, or contact us at <a href=\"mailto:ravdess@gmail.com?subject=RAVDESS%20Commercial%20License\">ravdess@gmail.com.</a></p>\n<p><strong>Related Data sets</strong></p>\n<ul>\n<li>RAVDESS Facial Landmark Tracking data set [<a href=\"../record/3255102\">Zenodo project page</a>].</li>\n</ul>",
+    "publication_date": "2018-04-05",
+    "publisher": "Zenodo",
+    "references": [
+      {
+        "reference": "Livingstone SR, Russo FA (2018) The Ryerson Audio-Visual Database of Emotional Speech and Song (RAVDESS): A dynamic, multimodal set of facial and vocal expressions in North American English. PLoS ONE 13(5): e0196391. https://doi.org/10.1371/journal.pone.0196391"
+      }
+    ],
+    "related_identifiers": [
+      {
+        "identifier": "10.1371/journal.pone.0196391",
+        "relation_type": {
+          "id": "iscitedby",
+          "title": {
+            "de": "Wird zitiert von",
+            "en": "Is cited by"
+          }
+        },
+        "scheme": "doi"
+      },
+      {
+        "identifier": "10.5281/zenodo.3255102",
+        "relation_type": {
+          "id": "isreferencedby",
+          "title": {
+            "de": "Wird referenziert von",
+            "en": "Is referenced by"
+          }
+        },
+        "scheme": "doi"
+      }
+    ],
+    "resource_type": {
+      "id": "dataset",
+      "title": {
+        "de": "Datensatz",
+        "en": "Dataset"
+      }
+    },
+    "rights": [
+      {
+        "description": {
+          "en": ""
+        },
+        "icon": "cc-by-nc-sa-icon",
+        "id": "cc-by-nc-sa-4.0",
+        "props": {
+          "scheme": "spdx",
+          "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode"
+        },
+        "title": {
+          "en": "Creative Commons Attribution Non Commercial Share Alike 4.0 International"
+        }
+      }
+    ],
+    "subjects": [
+      {
+        "subject": "emotion"
+      },
+      {
+        "subject": "emotion expression"
+      },
+      {
+        "subject": "emotion perception"
+      },
+      {
+        "subject": "emotion database"
+      },
+      {
+        "subject": "facial expressions"
+      },
+      {
+        "subject": "vocal expressions"
+      },
+      {
+        "subject": "stimulus validation"
+      },
+      {
+        "subject": "face"
+      },
+      {
+        "subject": "voice"
+      },
+      {
+        "subject": "multimodal communication"
+      },
+      {
+        "subject": "RAVDESS"
+      },
+      {
+        "subject": "emotion classification"
+      }
+    ],
+    "title": "The Ryerson Audio-Visual Database of Emotional Speech and Song (RAVDESS)",
+    "version": "1.0.0"
+  },
+  "parent": {
+    "access": {
+      "owned_by": {
+        "user": "42980"
+      },
+      "settings": {
+        "accept_conditions_text": null,
+        "allow_guest_requests": false,
+        "allow_user_requests": false,
+        "secret_link_expiration": 0
+      }
+    },
+    "communities": {
+      "default": "849a9628-04de-49d6-9a86-d62749064a8a",
+      "entries": [
+        {
+          "access": {
+            "member_policy": "open",
+            "members_visibility": "public",
+            "record_submission_policy": "open",
+            "review_policy": "open",
+            "visibility": "public"
+          },
+          "children": {
+            "allow": false
+          },
+          "created": "2018-04-05T17:35:14.198788+00:00",
+          "custom_fields": {
+            "subjects": [
+              {
+                "id": "euroscivoc:93"
+              },
+              {
+                "id": "euroscivoc:299"
+              }
+            ]
+          },
+          "deletion_status": {
+            "is_deleted": false,
+            "status": "P"
+          },
+          "id": "849a9628-04de-49d6-9a86-d62749064a8a",
+          "links": {},
+          "metadata": {
+            "curation_policy": "<p>At the <a href=\"https://affectivedatascience.com\" target=\"_blank\" rel=\"noopener\">Affective Data Science Lab</a> (ADSL), we focus on curating, collecting, and managing large-scale datasets that capture emotional expressions, physiological responses, and related behavioral data. Our priority is to ensure that the data we use is reliable, representative, and ethically sourced.Data sets that are produced at the ADSL will be included in this Zenodo community. The community is curated by Dr. <a href=\"https://affectivedatascience.com/people/livingstone_sr\" target=\"_blank\" rel=\"noopener\">Steven R. Livingstone</a>.</p>",
+            "description": "At the Affective Data Science Lab, we integrate programming, experimental methods, statistics, and machine learning to study emotion and its related disorders. We build datasets of emotional expressions for users in machine learning and psychology.",
+            "funding": [
+              {
+                "award": {
+                  "identifiers": [
+                    {
+                      "identifier": "https://www.nserc-crsng.gc.ca/NSERC-CRSNG/FundingDecisions-DecisionsFinancement/ResearchGrants-SubventionsDeRecherche/ResultsInsDetail-ResultatsEtabDetails_eng.asp?Year=2023&Institution=46",
+                      "scheme": "url"
+                    }
+                  ],
+                  "number": "RGPIN-2023-03786",
+                  "title": {
+                    "en": "Affective Breath Recognition: understanding the role of respiration in speech emotion classification"
+                  }
+                },
+                "funder": {
+                  "id": "01h531d29"
+                }
+              },
+              {
+                "award": {
+                  "identifiers": [
+                    {
+                      "identifier": "https://www.sshrc-crsh.gc.ca/results-resultats/recipients-recipiendaires/2024/ig-ss-eng.aspx",
+                      "scheme": "url"
+                    }
+                  ],
+                  "number": "435-2024-0503",
+                  "title": {
+                    "en": "Reducing the impacts of emotion recognition bias on Canadians"
+                  }
+                },
+                "funder": {
+                  "id": "04j5jqy92"
+                }
+              }
+            ],
+            "page": "<p><strong>Ryerson Audio-Visual Database of Emotional Speech and Song (RAVDESS)</strong></p>\n<p>The <a href=\"https://affectivedatascience.com/datasets.html#ravdess\" target=\"_blank\" rel=\"noopener\">RAVDESS</a> is a validated multimodal database of emotional speech and song.&nbsp; The set of 7356 files can be downloaded from the RAVDESS dataset.&nbsp; The set of recordings were evaluated&nbsp;by 319 individuals who were characteristic of untrained research participants from North America. High levels of emotional validity and intra-individual test-retest intrarater reliability were reported.&nbsp;All recordings are made freely available under a Creative Commons non-commercial license (CC BY-NA-SC 4.0).</p>\n<p><strong>PeakAffectDS</strong></p>\n<p><a href=\"https://affectivedatascience.com/datasets.html#peakaffectds\" target=\"_blank\" rel=\"noopener\">PeakAffectDS</a> contains 663 files (total size: 1.84 GB), consisting of 612 physiology files, and 51 perceptual rating files. The dataset contains 51 untrained research participants (39 female, 12 male), who had their body physiology recorded while watching movie clips validated to induce strong emotional reactions. Emotional conditions included: calm, happy, sad, angry, fearful, and disgust; along with baseline a neutral condition. Four physiology channels were recorded with a Biopac MP36 system: two facial muscles with fEMG (zygomaticus major, corrugator supercilii) using Ag/AgCl electrodes, heart activity with ECG using a 1-Lead, Lead II configuration, and respiration with a wearable strain-gauge belt. While viewing movie clips, participants indicated in real-time when they experienced a \"peak\" emotional event, including: chills, tears, or the startle reflex. After each clip, participants further rated their felt emotional state using a forced-choice categorical response measure, along with their felt Arousal and Valence. All data are provided in plaintext (.csv) format.</p>\n<p><strong>Facial Expression and Landmark Tracking (FELT) dataset</strong></p>\n<p>The <a href=\"https://affectivedatascience.com/datasets.html#felt\" target=\"_blank\" rel=\"noopener\">FELT dataset</a> contains tracked facial expression movements and animated videos from the Ryerson Audio-Visual Database of Emotional Speech and Song (RAVDESS) [<a href=\"https://zenodo.org/record/1188976\">RAVDESS Zenodo page</a>]. Tracking data and videos were produced by Py-Feat 0.6.2 (2024-03-29 release) (Cheong, J.H., Jolly, E., Xie, T. <em>et al.</em> Py-Feat: Python Facial Expression Analysis Toolbox. <em>Affec Sci</em> <strong>4</strong>, 781&ndash;796 (2023). https://doi.org/10.1007/s42761-023-00191-4) and custom code (<a href=\"https://github.com/harveyliao/Py-feat-RAVDESS\">github repo</a>). Tracked information includes: facial emotion classification estimates, facial landmark detection (68 points), head pose estimation (yaw, pitch, roll, x, y), and facial Action Unit (AU) recognition. Videos include: landmark overlay videos, AU activation animations, and landmark plot animations.</p>\n<p><strong>RAVDESS Facial Landmark Tracking</strong></p>\n<p>This <a href=\"https://affectivedatascience.com/datasets.html#landmark-tracking\" target=\"_blank\" rel=\"noopener\">RAVDESS Facial Landmark Tracking dataset</a> contains tracked facial landmark movements from the RAVDESS using OpenFace. Tracked information includes: facial landmark detection, head pose estimation, facial action unit recognition, and eye-gaze estimation.</p>\n<p>&nbsp;</p>",
+            "title": "Affective Data Science Lab (ADSL)",
+            "type": {
+              "id": "organization"
+            },
+            "website": "https://affectivedatascience.com"
+          },
+          "revision_id": 8,
+          "slug": "ravdess",
+          "updated": "2025-08-26T17:52:40.123737+00:00"
+        }
+      ],
+      "ids": [
+        "849a9628-04de-49d6-9a86-d62749064a8a"
+      ]
+    },
+    "id": "1188975",
+    "pids": {
+      "doi": {
+        "client": "datacite",
+        "identifier": "10.5281/zenodo.1188975",
+        "provider": "datacite"
+      }
+    }
+  },
+  "pids": {
+    "doi": {
+      "client": "datacite",
+      "identifier": "10.5281/zenodo.1188976",
+      "provider": "datacite"
+    },
+    "oai": {
+      "identifier": "oai:zenodo.org:1188976",
+      "provider": "oai"
+    }
+  },
+  "revision_id": 59,
+  "stats": {
+    "all_versions": {
+      "data_volume": 585822522002495.0,
+      "downloads": 1166563,
+      "unique_downloads": 554095,
+      "unique_views": 282121,
+      "views": 326711
+    },
+    "this_version": {
+      "data_volume": 584966089918658.0,
+      "downloads": 1164732,
+      "unique_downloads": 553613,
+      "unique_views": 281041,
+      "views": 325452
+    }
+  },
+  "status": "published",
+  "swh": {},
+  "updated": "2024-10-19T18:54:21.326337+00:00",
+  "versions": {
+    "index": 1,
+    "is_latest": true
+  }
+}

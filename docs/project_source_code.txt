@@ -1,0 +1,384 @@
+================================================================================
+File: requirements.txt
+================================================================================
+mediapipe==0.10.32
+sounddevice==0.5.5
+opencv-python==4.13.0.92
+numpy==2.3.5
+librosa==0.11.0
+tqdm>=4.65.0
+pillow>=9.0.0
+fastapi>=0.109.0
+uvicorn>=0.27.0
+python-multipart>=0.0.9
+soundfile>=0.12.1
+scikit-learn>=1.4.0
+joblib>=1.3.0
+pydantic>=2.0.0
+scipy>=1.10.0
+gTTS
+audiomentations
+torch
+torchvision
+torchaudio
+
+================================================================================
+File: generate_synthetic_data.py
+================================================================================
+import os
+import shutil
+import random
+import soundfile as sf
+import librosa
+import numpy as np
+from gtts import gTTS
+from audiomentations import Compose, AddGaussianNoise, TimeStretch, PitchShift, Shift
+from tqdm import tqdm
+
+# Configuration
+SOURCE_AUDIO_DIR = os.path.join(os.getcwd(), '..', 'telugu_audio', 'telugu')
+TARGET_AUDIO_DIR = os.path.join(os.getcwd(), '..', 'telugu_audio_synthetic', 'telugu')
+
+# Ensure target directory exists
+if not os.path.exists(TARGET_AUDIO_DIR):
+    os.makedirs(TARGET_AUDIO_DIR)
+
+# Emotions mappping
+EMOTIONS = ['angry', 'happy', 'nuetral', 'sad', 'suprised'] # Note: 'nuetral' and 'suprised' match directory names
+
+# Text for TTS (Telugu Sentences for each emotion)
+# Using a small set of example sentences. In a real scenario, this list would be much larger.
+TTS_SENTENCES = {
+    'angry': [
+        "నాకు చాలా కోపంగా ఉంది!", "నీవు చేసింది తప్పు.", "ఇది సహించరానిది.", "నన్ను విసిగించకు!", "ఇక్కడి నుండి వెళ్లిపో.",
+        "నోరు మూసుకో!", "నీకు ఎంత ధైర్యం?", "నేను నిన్ను క్షమించను.", "ఇది అన్యాయం!", "నా కళ్ళ ముందు నుండి పో.",
+        "మళ్ళీ ఇలా చేయవద్దు.", "నాకు చిరాకు తెప్పించకు.", "నీ ప్రవర్తన నాకు నచ్చలేదు.", "ఎందుకు ఇలా చేశావు?", "నేను చాలా సీరియస్ గా ఉన్నాను.",
+        "ఇది మూర్ఖత్వం.", "నాతో మాట్లాడకు.", "అంతా నాశనం చేశావు.", "నేను నిన్ను నమ్మను.", "ఇది చెత్త పని."
+    ],
+    'happy': [
+        "నాకు చాలా సంతోషంగా ఉంది.", "ఈ రోజు చాలా బాగుంది.", "శుభవార్త!", "మనం గెలిచాం!", "అభినందనలు.",
+        "ఇది అద్భుతమైన రోజు.", "నాకు చాలా ఆనందంగా ఉంది.", "ఎంత మంచి వార్త చెప్పారు!", "నేను చాలా ఉత్సాహంగా ఉన్నాను.", "అంతా మంచికే జరిగింది.",
+        "ఇది నా జీవితంలో అత్యుత్తమ రోజు.", "నవ్వుతూ ఉండండి.", "పార్టీ చేసుకుందాం!", "నా కల నిజమైంది.", "మీరు చాలా బాగా చేశారు.",
+        "సంతోషం అంటే ఇదేనేమో.", "చాలా థాంక్స్!", "ఆహా, ఎంత బాగుందో!", "నేను గాలిలో తేలుతున్నాను.", "అంతా శుభమే."
+    ],
+    'nuetral': [
+        "ఇది ఒక పుస్తకం.", "సమయం ఎంత?", "నేను ఇంటికి వెళ్తున్నాను.", "వర్షం పడుతోంది.", "నా పేరు రవి.",
+        "ఇది ఒక పెన్ను.", "బస్సు ఎప్పుడు వస్తుంది?", "తలుపు తీయండి.", "నాకు మంచినీళ్లు కావాలి.", "రేపు కలుద్దాం.",
+        "అతను బడికి వెళ్ళాడు.", "ఆకాశం నీలంగా ఉంది.", "ఇది నా ఇల్లు.", "అన్నం తిన్నావా?", "నాకు పని ఉంది.",
+        "టీవీ ఆన్ చేయ్.", "ఇప్పుడు సమయం ఐదు గంటలు.", "ఆమె పాట పాడుతోంది.", "నేను పుస్తకం చదువుతున్నాను.", "కారు రోడ్డు మీద ఉంది."
+    ],
+    'sad': [
+        "నాకు చాలా బాధగా ఉంది.", "నేను ఒంటరిగా ఉన్నాను.", "అంతా అయిపోయింది.", "ఎందుకు ఇలా జరిగింది?", "నాకు ఏడుపు వస్తోంది.",
+        "నా గుండె పగిలిపోయింది.", "ఆశలన్నీ అడుగంటాయి.", "ఎవరూ నన్ను అర్థం చేసుకోవడం లేదు.", "జీవితం చాలా కష్టంగా ఉంది.", "నేను ఓడిపోయాను.",
+        "నాకు ఎవరూ లేరు.", "ఇది చాలా దురదృష్టకరం.", "నా స్నేహితుడు దూరమయ్యాడు.", "మనసు బాగోలేదు.", "కన్నీళ్లు ఆగడం లేదు.",
+        "ఎందుకు దేవుడా ఈ శిక్ష?", "నాకు బతకాలని లేదు.", "అంతా చీకటిగా ఉంది.", "నేను చాలా అలసిపోయాను.", "నా తప్పు ఏంటి?"
+    ],
+    'suprised': [
+        "నిజమా? నేను నమ్మలేకపోతున్నాను!", "అద్భుతం!", "ఇది ఎలా సాధ్యం?", "వాయ్! ఇది చాలా పెద్దది.", "నువ్వు వచ్చావా?",
+        "ఇంత తొందరగానా?", "ఇది నిజంగా జరిగిందా?", "ఓరి దేవుడా!", "నేను షాక్ అయ్యాను.", "అది ఏమిటి?",
+        "అలా ఎలా జరిగింది?", "నమ్మశక్యంగా లేదు.", "నువ్వా ఇక్కడ?", "ఎంత ఆశ్చర్యం!", "అరే, ఇది ఎప్పుడు కొన్నావు?",
+        "ఇది కలతో కూడా ఊహించలేదు.", "ఇంత అందంగా ఉందా!", "వావ్, సూపర్!", "ఊహించని పరిణామం.", "నిజంగానా?"
+    ]
+}
+
+# Augmentation Pipeline
+augmenter = Compose([
+    AddGaussianNoise(min_amplitude=0.001, max_amplitude=0.015, p=0.5),
+    TimeStretch(min_rate=0.8, max_rate=1.25, p=0.5),
+    PitchShift(min_semitones=-4, max_semitones=4, p=0.5)
+])
+
+def generate_tts_data():
+    print("Generating TTS Data...")
+    for emotion, sentences in TTS_SENTENCES.items():
+        print(f"Processing emotion: {emotion}, Sentences: {len(sentences)}")
+        emotion_dir = os.path.join(TARGET_AUDIO_DIR, emotion)
+        os.makedirs(emotion_dir, exist_ok=True)
+        
+        for i, text in enumerate(sentences):
+            try:
+                # print(f"Generating TTS {i+1}/{len(sentences)} for {emotion}...") 
+                tts = gTTS(text=text, lang='te', slow=False)
+                filename = f"tts_{emotion}_{i+1}.mp3"
+                filepath = os.path.join(emotion_dir, filename)
+                tts.save(filepath)
+                
+                data, sr = librosa.load(filepath, sr=None)
+                wav_filename = filename.replace('.mp3', '.wav')
+                wav_filepath = os.path.join(emotion_dir, wav_filename)
+                sf.write(wav_filepath, data, sr)
+                os.remove(filepath)
+            except Exception as e:
+                print(f"Error generating TTS for {emotion} index {i}: {e}")
+
+def augment_existing_data():
+    print("Augmenting Existing Data...")
+    
+    # Check if source exists
+    if not os.path.exists(SOURCE_AUDIO_DIR):
+        print(f"Source directory not found: {SOURCE_AUDIO_DIR}")
+        return
+
+    # Collect all audio files first
+    all_files = []
+    for root, dirs, files in os.walk(SOURCE_AUDIO_DIR):
+        for file in files:
+            if file.lower().endswith(('.wav', '.mp3', '.flac', '.ogg')):
+                all_files.append(os.path.join(root, file))
+    
+    print(f"Found {len(all_files)} files to augment.")
+
+    # Process files
+    for source_path in tqdm(all_files, desc="Augmenting"):
+        try:
+            # Determine relative path to maintain structure
+            # root is dirname of source_path
+            root = os.path.dirname(source_path)
+            rel_path = os.path.relpath(root, SOURCE_AUDIO_DIR)
+            target_subdir = os.path.join(TARGET_AUDIO_DIR, rel_path)
+            os.makedirs(target_subdir, exist_ok=True)
+            
+            # Load audio
+            data, sr = librosa.load(source_path, sr=None)
+            
+            # Apply augmentation 5 times per file (Increased for better DL performance)
+            for i in range(5):
+                augmented_data = augmenter(samples=data, sample_rate=sr)
+                
+                # Construct new filename
+                file = os.path.basename(source_path)
+                base_name, ext = os.path.splitext(file)
+                new_filename = f"{base_name}_aug_{i+1}{ext}" 
+                if not new_filename.lower().endswith('.wav'):
+                        new_filename = f"{base_name}_aug_{i+1}.wav"
+                
+                target_path = os.path.join(target_subdir, new_filename)
+                
+                # Save
+                sf.write(target_path, augmented_data, sr)
+                
+        except Exception as e:
+            # print(f"Error augmenting {source_path}: {e}")
+            pass
+
+if __name__ == "__main__":
+    print("Starting Synthetic Data Generation...")
+    
+    try:
+        generate_tts_data()
+        augment_existing_data()
+        print("\nSynthetic Data Generation Completed Successfully!")
+        print(f"Data saved to: {TARGET_AUDIO_DIR}")
+        
+    except Exception as e:
+        print(f"\nAn error occurred: {e}")
+
+================================================================================
+File: train_audio_resnet.py
+================================================================================
+import os
+import sys
+import glob
+import numpy as np
+import librosa
+import torch
+import torch.nn as nn
+import torch.optim as optim
+from torch.utils.data import Dataset, DataLoader
+from torchvision import models
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import LabelEncoder
+from tqdm import tqdm
+import joblib
+
+# Add src to path
+sys.path.append(os.path.join(os.getcwd(), "src"))
+from config.settings import MODELS_DIR, EMOTIONS
+
+# Configuration
+ORIGINAL_DATA_DIR = os.path.join(os.getcwd(), '..', 'telugu_audio', 'telugu')
+SYNTHETIC_DATA_DIR = os.path.join(os.getcwd(), '..', 'telugu_audio_synthetic', 'telugu')
+MODELS_DIR = os.path.join(os.getcwd(), "assets", "models")
+os.makedirs(MODELS_DIR, exist_ok=True)
+
+# Audio Config
+SAMPLE_RATE = 16000
+DURATION = 3.0 # Increased duration context
+SAMPLES_PER_TRACK = int(SAMPLE_RATE * DURATION)
+N_MFCC = 128 # Using Mels instead of MFCC for ResNet (Frequency resolution)
+HOP_LENGTH = 512 
+
+class AudioDataset(Dataset):
+    def __init__(self, X, y):
+        self.X = X
+        self.y = y
+
+    def __len__(self):
+        return len(self.X)
+
+    def __getitem__(self, idx):
+        # ResNet expects (3, H, W) usually, but we will modify input layer to (1, H, W)
+        x = torch.tensor(self.X[idx], dtype=torch.float32).unsqueeze(0) 
+        y = torch.tensor(self.y[idx], dtype=torch.long)
+        return x, y
+
+def load_and_preprocess_data():
+    X = []
+    y = []
+    
+    dir_to_label = {
+        'angry': 'Angry',
+        'happy': 'Happy',
+        'nuetral': 'Neutral',
+        'sad': 'Sad',
+        'suprised': 'Surprised'
+    }
+    
+    directories = [ORIGINAL_DATA_DIR, SYNTHETIC_DATA_DIR]
+    
+    print("Loading and preprocessing data (Mel-Spectrograms)...")
+    for data_dir in directories:
+        if not os.path.exists(data_dir):
+            continue
+            
+        for dir_name, label in dir_to_label.items():
+            emotion_path = os.path.join(data_dir, dir_name)
+            if not os.path.exists(emotion_path):
+                continue
+                
+            files = glob.glob(os.path.join(emotion_path, "*"))
+            
+            for file_path in tqdm(files, desc=f"{label}"):
+                if not file_path.lower().endswith(('.wav', '.mp3')):
+                    continue
+                    
+                try:
+                    # Load audio
+                    signal, sr = librosa.load(file_path, sr=SAMPLE_RATE)
+                    
+                    # Fix length to SAMPLES_PER_TRACK
+                    if len(signal) > SAMPLES_PER_TRACK:
+                        signal = signal[:SAMPLES_PER_TRACK]
+                    else:
+                        pad_width = SAMPLES_PER_TRACK - len(signal)
+                        signal = np.pad(signal, (0, pad_width), mode='constant')
+                    
+                    # Compute Log-Mel Spectrogram (Rich features for ResNet)
+                    melspec = librosa.feature.melspectrogram(y=signal, sr=SAMPLE_RATE, n_mels=N_MFCC, hop_length=HOP_LENGTH)
+                    melspec = librosa.power_to_db(melspec, ref=np.max)
+                    
+                    # Normalization (Crucial for Neural Nets)
+                    mean = np.mean(melspec)
+                    std = np.std(melspec)
+                    if std > 0:
+                        melspec = (melspec - mean) / std
+                    else:
+                        melspec = (melspec - mean)
+                    
+                    X.append(melspec)
+                    y.append(label)
+                    
+                except Exception as e:
+                    # print(f"Error: {e}")
+                    pass
+                    
+    return np.array(X), np.array(y)
+
+def train_resnet():
+    # 1. Load Data
+    X_raw, y_raw = load_and_preprocess_data()
+    
+    if len(X_raw) == 0:
+        print("No data found!")
+        return
+
+    # 2. Encode Labels
+    le = LabelEncoder()
+    y_encoded = le.fit_transform(y_raw)
+    joblib.dump(le, os.path.join(MODELS_DIR, "label_encoder_cnn.pkl"))
+    
+    print(f"Classes: {le.classes_}")
+    num_classes = len(le.classes_)
+    
+    # 3. Split
+    X_train, X_test, y_train, y_test = train_test_split(X_raw, y_encoded, test_size=0.15, random_state=42, stratify=y_encoded)
+    
+    train_dataset = AudioDataset(X_train, y_train)
+    test_dataset = AudioDataset(X_test, y_test)
+    
+    train_loader = DataLoader(train_dataset, batch_size=32, shuffle=True)
+    test_loader = DataLoader(test_dataset, batch_size=32, shuffle=False)
+    
+    # 4. Model Setup (ResNet18)
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    print(f"Training on {device}")
+    
+    model = models.resnet18(pretrained=True)
+    
+    # Modify first layer for 1 channel (Grayscale/Spectrogram)
+    model.conv1 = nn.Conv2d(1, 64, kernel_size=7, stride=2, padding=3, bias=False)
+    
+    # Modify FC layer for num_classes
+    num_ftrs = model.fc.in_features
+    model.fc = nn.Linear(num_ftrs, num_classes)
+    
+    model = model.to(device)
+    
+    # Loss & Optimizer
+    criterion = nn.CrossEntropyLoss()
+    optimizer = optim.AdamW(model.parameters(), lr=0.0005, weight_decay=1e-3)
+    scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode='max', factor=0.5, patience=3, verbose=True)
+    
+    # 5. Training Loop
+    epochs = 40
+    best_acc = 0.0
+    
+    for epoch in range(epochs):
+        model.train()
+        running_loss = 0.0
+        correct = 0
+        total = 0
+        
+        for inputs, labels in train_loader:
+            inputs, labels = inputs.to(device), labels.to(device)
+            
+            optimizer.zero_grad()
+            outputs = model(inputs)
+            loss = criterion(outputs, labels)
+            loss.backward()
+            optimizer.step()
+            
+            running_loss += loss.item()
+            _, predicted = torch.max(outputs.data, 1)
+            total += labels.size(0)
+            correct += (predicted == labels).sum().item()
+            
+        train_acc = 100 * correct / total
+        
+        # Validation
+        model.eval()
+        val_correct = 0
+        val_total = 0
+        with torch.no_grad():
+            for inputs, labels in test_loader:
+                inputs, labels = inputs.to(device), labels.to(device)
+                outputs = model(inputs)
+                _, predicted = torch.max(outputs.data, 1)
+                val_total += labels.size(0)
+                val_correct += (predicted == labels).sum().item()
+        
+        val_acc = 100 * val_correct / val_total
+        
+        # Step Scheduler
+        scheduler.step(val_acc)
+        
+        print(f"Epoch [{epoch+1}/{epochs}] Loss: {running_loss/len(train_loader):.4f} Train Acc: {train_acc:.2f}% Val Acc: {val_acc:.2f}%")
+        
+        if val_acc > best_acc:
+            best_acc = val_acc
+            torch.save(model.state_dict(), os.path.join(MODELS_DIR, "audio_resnet18.pth"))
+            
+    print(f"Training Complete. Best Validation Accuracy: {best_acc:.2f}%")
+
+if __name__ == "__main__":
+    train_resnet()

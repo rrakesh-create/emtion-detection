@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Data
+datasets/
+metrics/
+emotion_log.txt
+
+# Models (optional, if you want to track them remove these lines)
+# models/*.pth
+# models/*.npy
+
+# VS Code
+.vscode/
+
+# Environment
+.env
+venv/
+.venv/
+android_sdk/
+.idea/
+.dart_tool/
+build/
+*.apk

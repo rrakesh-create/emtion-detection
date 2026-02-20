@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mers"
+version = "1.1.0"
+description = "Multimodal Emotion Recognition System"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "torch>=2.0.0",
+    "torchvision",
+    "torchaudio",
+    "mediapipe",
+    "sounddevice",
+    "opencv-python",
+    "numpy",
+    "librosa",
+    "facenet-pytorch",
+    "tqdm",
+    "pillow",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["mers*"]

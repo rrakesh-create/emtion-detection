@@ -1,0 +1,9 @@
+torch>=2.0.0
+torchvision
+torchaudio
+mediapipe
+sounddevice
+opencv-python
+numpy
+librosa
+facenet-pytorch
